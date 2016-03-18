@@ -3,14 +3,11 @@
     e da esquerda quando o robô precisa andar em linha reta.
 """
 
-if __name__ == "__main__":
-    main()
+# constante com o RPM total dos motores
+RPM_TOTAL = 1500
 
 # método main
 def main():
-    # constante com o RPM total dos motores
-    RPM_TOTAL = 1500
-
     while True: # inicia laço que só acaba quando o sistema é desligado
         # recebe os sinais de controle (-100 a 100)
         esquerda = receberSinalControle(ESQUERDA)
@@ -69,3 +66,6 @@ def rpmReal(sinal):
         return rpm * (1 - (5/100))
     else: # percentual_total == 100
         return rpm * (1 - (5.9/100))
+
+if __name__ == "__main__":
+    main()
