@@ -47,7 +47,12 @@ def main():
     dessa relação.
     """
 
-    hor_angle = math.atan((cone_y - centro_y) / (centro_x - cone_x))
+    tan = (cone_y - centro_y) / (cone_x - centro_x)
+
+    if tan < 0: # tangente negativa
+        hor_angle = math.atan(-tan)
+    else:
+        hor_angle = math.atan(tan)
 
     #-------------------------------
 
