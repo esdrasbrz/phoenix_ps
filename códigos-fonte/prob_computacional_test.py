@@ -6,7 +6,7 @@
 """
 
 # constante com o RPM total dos motores
-RPM_TOTAL = 1500
+RPM_TOTAL = 15435.2
 
 # método main
 def main():
